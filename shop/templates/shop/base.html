@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Our shop{% endblock %}</title>
+    <link href="{% static "css/shop.css" %}" rel="stylesheet">
+  </head>
+  <body >
+    <div id="hd">
+      <div id="header"><h1>Thriving with Celiacs Shop</h1></div>
+    </div>
+    <div id="bd">
+      <div id="yui-main">
+        <div class="yui-b">
+          <div class="header" id="header">
+            {% with total_items=cart|length %}
+            {% if total_items > 0 %}
+              Your cart:
+              <a href="{% url "cart:cart_detail" %}">
+                {{ total_items }} item{{ total_items|pluralize }},
+                ${{ cart.get_total_price }}
+              </a>
+            {% else %}
+              Your cart is empty.
+            {% endif %}
+          {% endwith %}
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div id="ft">
+        <div id="footer">
+        <a href="http://mysite.com:2000/celiacblog/" >Our Blog</a> |
+          <a href="http://mysite.com:2000/recipes/">Recipes</a> |
+          <a href="http://mysite.com:2000/tips" >Shopping Tips</a> |
+              <a href="http://mysite.com:2000/celiachomepage" >Home</a> 
+              <BR>
+                Disclaimer:  We are not medical professionals we only provide what works for us.  Always consult your phyisician
+            </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
+
