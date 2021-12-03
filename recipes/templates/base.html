@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static "css/recipe.css" %}" rel="stylesheet">
+</head>
+<body>
+<div id="doc" class="yui-t1">
+  <div id="hd">
+    <div id="header"><h1>Thriving with Celiacs Disease</h1></div>
+  </div>
+  <div id="bd">
+    <div id="yui-main">
+      <div class="yui-b">
+        <div class="content"><BR>     <h2>Gluten Free Recipes</h2>
+          <p>Here are our latest recipes.</p>
+           <h3>Latest Recipes</h3> 
+        </div>
+      </div>
+    </div>
+    <div class="yui-b">
+      <div id="secondary">
+        <BR><a href="http://mysite.com:2000/celiacblog/" >Our Blog</a>
+        <BR><a href="http://mysite.com:2000/tips" >Shopping Tips</a>
+        <BR><a href="http://mysite.com:2000/shop" >Our Shop</a>
+        <BR><a href="http://mysite.com:2000/celiachomepage/">Home</a>
+      </div>
+    </div>
+  </div>
+  <div id="ft">
+    <div id="footer">Disclaimer:  We are not medical professionals we only provide what works for us.  Always consult your phyisician</div>
+  </div>
+</div>
+</body>
+</html>
