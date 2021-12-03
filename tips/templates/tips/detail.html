@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="{% static "css/tips.css" %}" rel="stylesheet">
+</head>
+<body></body>
+
+<div id="doc" class="yui-t1">
+  <div id="hd">
+    <div id="header"><h1>Thriving with Celiacs Disease</h1></div>
+  </div>
+<div id="bd">
+  <div id="yui-main">
+    <div class="yui-b">
+      <div class="content">
+        {% block content %}
+                  {% block title %}{{ tips.title }}{% endblock %}
+                    <h1>{{ tips.name }}</h1>
+                  {{ tips.tip_desc|truncatewords:30|linebreaks }}
+                {% endblock %}
+      </div>
+    </div>
+  </div>
+    <div class="yui-b">
+      <div id="secondary">
+        <BR><a href="http://mysite.com:2000/celiacblog/" >Our Blog</a>
+          
+        <BR><a href="http://mysite.com:2000/recipes/">Recipes</a>
+          <BR><a href="http://mysite.com:2000/shop" >Our Shop</a>
+          <BR><a href="http://mysite.com:2000/celiachomepage" >Home</a>
+      </div>
+    </div>
+    </div>
+    <div id="ft">
+      <div id="footer">Disclaimer:  We are not medical professionals we only provide what works for us.  Always consult your phyisician</div>
+  </div>
+</div>
+
