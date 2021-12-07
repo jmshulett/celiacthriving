@@ -18,17 +18,6 @@
             <p>This is the Thriving with Celiacs Blog. I've written {% total_posts %} posts so far.</p>
             <h3>Latest posts</h3>
             {% show_latest_posts 3 %}
-            <h3>Most commented posts</h3>
-              {% get_most_commented_posts as most_commented_posts %}
-                  
-              <ul>
-                {% for post in most_commented_posts %}
-                  <li>
-                    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-              <a href="{% url "celiacblog:post_search" %}">Search</a>
               <p>
                 <a href="{% url "celiacblog:post_feed" %}">Subscribe to my RSS feed</a>
               </p>
@@ -38,10 +27,10 @@
       <div class="yui-b">
         
         <div id="secondary">
-                    <BR><a href="http://mysite.com:2000/recipes/">Recipes</a>
-            <BR><a href="http://mysite.com:2000/tips" >Shopping Tips</a>
-              <BR><a href="http://mysite.com:2000/shop" >Our Shop</a>
-              <BR>  <a href="http://127.0.0.1:2000/celiachomepage/" class="logo">Home</a>
+            <BR><a href="https://celiacthrive.xyz/recipes/">Recipes</a>
+            <BR><a href="https://celiacthrive.xyz/tips" >Shopping Tips</a>
+            <BR><a href="https://celiacthrive.xyz/shop" >Our Shop</a>
+            <BR>  <a href="https://celiacthrive.xyz/celiachomepage/" class="logo">Home</a>
         </div>
       </div>
     </div>

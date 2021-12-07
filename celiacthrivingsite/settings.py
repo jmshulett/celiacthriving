@@ -22,13 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0*#q)=fy4z@*2c2i#!+hy3%@@u2ho@yt(7rl^hoz%%hs52t3bz'
+#SECRET_KEY = '0*#q)=fy4z@*2c2i#!+hy3%@@u2ho@yt(7rl^hoz%%hs52t3bz'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-^uqif^-j)y7^78_2af*58f--f618bs5_$-se!bb=qee^ed$@$!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = ['143.244.153.105', 'localhost', 'celiacthrive.xyz']
 
 # Application definition
 SITE_ID = 1
@@ -106,6 +107,8 @@ DATABASES = {
         'NAME': 'celiacblog',
         'USER': 'celiacblog',
         'PASSWORD': 'celiacblog',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -169,7 +172,6 @@ BRAINTREE_CONF = braintree.Configuration(
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'

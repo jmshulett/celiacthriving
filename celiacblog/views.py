@@ -1,18 +1,15 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post
+from .models import Post, Comment
 from django.core.paginator import Paginator, EmptyPage,\
                                   PageNotAnInteger
 from django.views.generic import ListView
-from .forms import EmailPostForm
 from django.core.mail import send_mail
-from .models import Post, Comment
-from .forms import EmailPostForm, CommentForm
 from taggit.models import Tag
 from django.db.models import Count
 from django.contrib.postgres.search import SearchVector
 from .forms import EmailPostForm, CommentForm, SearchForm
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
-from . import views
+#from . import views
 
 
 

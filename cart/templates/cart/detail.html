@@ -42,8 +42,7 @@
                 {% csrf_token %}
               </form>
             </td>
-            <td class="num">${{ item.price }}</td>
-            <td class="num">${{ item.total_price }}</td>
+            <td class="num">Item Price ${{ item.price }}</td>
           </tr>
         {% endwith %}
       {% endfor %}
@@ -55,10 +54,7 @@
     </tbody>
   </table>
   <p class="text-right">
-    <a href="{% url "shop:product_list" %}" class="button
-    light">Continue shopping</a>
-    <a href="{% url "orders:order_create" %}" class="button">
-      Checkout
-    </a>
+    <a href="{% url "shop:product_list" %}" class="button light" style="color: #FF6A3D">Continue Shopping</a> | 
+    <a href="{% url "orders:order_create" %}" class="button" style="color: #FF6A3D">Checkout</a>
   </p>
 {% endblock %}
